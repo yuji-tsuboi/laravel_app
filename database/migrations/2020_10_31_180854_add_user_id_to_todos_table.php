@@ -15,6 +15,7 @@ class AddUserIdToTodosTable extends Migration
     {
         Schema::table('todos', function (Blueprint $table) {
             $table->integer('user_id');
+            $table->softDeletes();
         });
     }
 
